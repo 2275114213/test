@@ -1,0 +1,50 @@
+"""
+给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。
+
+注意：若 s 和 t 中每个字符出现的次数都相同，则称 s 和 t 互为字母异位词。
+
+ 
+
+示例 1:
+
+输入: s = "anagram", t = "nagaram"
+输出: true
+示例 2:
+
+输入: s = "rat", t = "car"
+输出: false
+
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/valid-anagram
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+"""
+
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s) != len(t):
+            return False
+        else:
+            first_dict = dict()
+            second_dict = dict()
+            for i in range(len(s)):
+                if t[i] in second_dict:
+                    second_dict[t[i]] += 1
+                else:
+                    second_dict[t[i]] = 1
+                if s[i] in first_dict:
+                    first_dict[s[i]] += 1
+                else:
+                    first_dict[s[i]] = 1
+            if first_dict == second_dict:
+                return True
+            else:
+                return False
+
+
+s = "anagram"
+t = "nagaram"
+res = Solution().isAnagram(s, t)
+print(res)
+
