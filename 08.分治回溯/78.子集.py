@@ -5,11 +5,24 @@
 输入：nums = [1,2,3]
 输出：[[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
 """
+from typing import List
 
 
-class Solution(object):
-    def subsets(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[List[int]]
-        """
+class Solution:
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        res = [[]]
+        for i in nums:
+            import copy
+            da = copy.deepcopy(res)
+            for num in da:
+                if num:
+                    num.append(i)
+                    res.append(num)
+            res.append([i])
+        return res
+
+
+nums = [1, 2, 3]
+res = Solution().subsets(nums)
+print(res)
+print(len([[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]))

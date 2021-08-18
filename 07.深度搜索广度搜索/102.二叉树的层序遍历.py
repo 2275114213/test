@@ -113,10 +113,8 @@ class Solution:
         if len(res) == level:
             res.append([])
         res[level].append(root.val)
-        if root.left:
-            self.level(root.left, level + 1, res)
-        if root.right:
-            self.level(root.right, level + 1, res)
+        for i in [root.left, root.right]:
+            self.level(i, level + 1, res)
 
 
 def list_to_binarytree(nums):
