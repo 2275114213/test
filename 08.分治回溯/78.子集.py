@@ -8,18 +8,41 @@
 from typing import List
 
 
+# 循环
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         res = [[]]
-        for i in nums:
-            import copy
-            da = copy.deepcopy(res)
-            for num in da:
-                if num:
-                    num.append(i)
-                    res.append(num)
-            res.append([i])
+        for num in nums:
+            newsets = []
+            print(res)
+            for subset in res:
+                new_sub = subset + [num]
+                newsets.append(new_sub)
+            res.extend(newsets)
         return res
+
+
+class Solution:
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        result = []
+        if not nums:
+            result.append([])
+            return result
+
+        def helper(result, nums, lis, index):
+            print(lis, index)
+            if index == len(nums):
+                result.append(lis)
+                return
+            helper(result, nums, lis, index + 1)
+            lis.append(nums[index])
+            helper(result, nums, lis, index + 1)
+            print("idnex",lis, index)
+            red = lis.pop()
+            print("===", lis, index)
+
+        helper(result, nums, [], 0)
+        return result
 
 
 nums = [1, 2, 3]
