@@ -109,7 +109,7 @@ class Solution:
 
     def level(self, root, level, res):
         if not root:
-            return print("===", res)
+            return res
         if len(res) == level:
             res.append([])
         res[level].append(root.val)
