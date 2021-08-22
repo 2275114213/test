@@ -14,16 +14,26 @@
 
 
 class Solution:
-    def climbStairs(self, n: int) -> int:
-        if n <= 2:
-            return n
-        f1, f2, f3 = 1, 2, 3
-        for i in range(3, n + 1):
-            f3 = f1 + f2
-            f1 = f2
-            f2 = f3
-        return f3
+    # def climbStairs(self, n: int) -> int:
+    #     if n <= 2:
+    #         return n
+    #     f1, f2, f3 = 1, 2, 3
+    #     for i in range(3, n + 1):
+    #         f3 = f1 + f2
+    #         f1 = f2
+    #         f2 = f3
+    #     return f3
+
+    def climbStairs(self, n: int) -> list:
+        a = list()
+        if n == 0:
+            return a
+        a.extend([0, 1])
+        for i in range(2, n):
+            tmp = a[i - 1] + a[i - 2]
+            a.append(tmp)
+        return a
 
 
-res = Solution().climbStairs(4)
+res = Solution().climbStairs(8)
 print(res)

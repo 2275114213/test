@@ -30,16 +30,13 @@ class Solution:
             return result
 
         def helper(result, nums, lis, index):
-            print(lis, index)
             if index == len(nums):
                 result.append(lis)
                 return
             helper(result, nums, lis, index + 1)
             lis.append(nums[index])
             helper(result, nums, lis, index + 1)
-            print("idnex",lis, index)
             red = lis.pop()
-            print("===", lis, index)
 
         helper(result, nums, [], 0)
         return result
