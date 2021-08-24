@@ -52,7 +52,7 @@
 # leetcode submit region begin(Prohibit modification and deletion)
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
-        # f[i][j]  表示从i，j 走到 end 多少中方法
+        # f[i][j]  表示从（i，j ）走到 end 多少中方法
         f = [[1] * n] + [[1] + [0] * (n - 1) for _ in range(m - 1)]
         for i in range(m - 1, -1, -1):
             for j in range(n - 1, -1, -1):
@@ -62,10 +62,21 @@ class Solution:
                     f[i][j] = f[i][j + 1] + f[i + 1][j]
         return f[0][0]
 
+    def uniquePaths3(self, m: int, n: int) -> int:
+        # f[i][j]  表示从start 到（i，j) 的不同路径
+        f = [[1] * n] + [[1] + [0] * (n - 1) for _ in range(m - 1)]
+        for i in range(m):
+            for j in range(n):
+                if i == 0 or j == 0:
+                    f[i][j] = 1
+                else:
+                    f[i][j] = f[i - 1][j] + f[i][j - 1]
+        return f[m - 1][n - 1]
+
     #  简单说就是压缩的维度是循环计算的历史。因为状态转移方程只跟前一行和前一列的相邻两个值有关，在循环嵌套里计算的时候，前一行的值就是上一个循环的计算结果，只需要考录列这一个维度就行了
 
     def uniquePaths1(self, m: int, n: int) -> int:
-        # f[i][j]  表示从i，j 走到 end 多少中方法
+        # f[i][j]
         f = [1] * n
         for i in range(m - 1, -1, -1):
             for j in range(n - 1, -1, -1):
@@ -74,8 +85,19 @@ class Solution:
                 else:
                     f[j] = f[j] + f[j + 1]
         return f[0]
+
+    def uniquePaths2(self, m: int, n: int) -> int:
+        # f[i][j]
+        f = [1] * n
+        for i in range(0, m):
+            for j in range(0, n):
+                if i == 0 or j == 0:
+                    f[j] = 1
+                else:
+                    f[j] = f[j] + f[j - 1]
+        return f[n - 1]
     # leetcode submit region end(Prohibit modification and deletion)
 
 
-res = Solution().uniquePaths(3, 2)
+res = Solution().uniquePaths2(3, 2)
 print(res)

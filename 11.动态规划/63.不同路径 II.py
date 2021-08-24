@@ -50,22 +50,19 @@ class Solution:
     def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
         n = len(obstacleGrid[0])  # 列
         m = len(obstacleGrid)  # 行
-        f = [1] * n
-        if obstacleGrid[m - 1][n - 1] == 1:
-            return 0
-        if obstacleGrid[0][0] == 1:
-            return 0
-        for i in range(m - 1, -1, -1):
-            for j in range(n - 1 - 1, -1, -1):
-                if obstacleGrid[i][j + 1] == 1:
+
+        # f[i][j]
+        f = [1] + [0] * n
+        for i in range(0, m):
+            for j in range(0, n):
+                if obstacleGrid[i][j] == 1:
                     f[j] = 0
                 else:
-                    f[j] = f[j] + f[j + 1]
-
-        return f[0]
+                    f[j] = f[j] + f[j - 1]
+        return f[n - 1]
 
 
 # leetcode submit region end(Prohibit modification and deletion)
-obstacleGrid = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]
+obstacleGrid = [[0, 0], [1, 1], [0, 0]]
 res = Solution().uniquePathsWithObstacles(obstacleGrid)
 print(res)
