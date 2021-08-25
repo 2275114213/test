@@ -1,140 +1,17 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="LeetcodeEditor">
     <option name="projectConfig">
       <map>
-        <entry key="$PROJECT_DIR$/../../../leetcode/leetcode/editor/cn/[51]N 皇后.py">
+        <entry key="$PROJECT_DIR$/../../../leetcode/leetcode/editor/cn/[120]三角形最小路径和.py">
           <value>
             <LeetcodeEditor>
-              <option name="path" value="$PROJECT_DIR$/../../../leetcode/leetcode/editor/cn/[51]N 皇后.py" />
-              <option name="questionId" value="51" />
+              <option name="path" value="$PROJECT_DIR$/../../../leetcode/leetcode/editor/cn/[120]三角形最小路径和.py" />
+              <option name="questionId" value="120" />
             </LeetcodeEditor>
           </value>
         </entry>
       </map>
     </option>
   </component>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="LeetcodeEditor">
-    <option name="projectConfig">
-      <map>
-        <entry key="$PROJECT_DIR$/leetcode/editor/cn/1143.最长公共子序列.py">
-          <value>
-            <LeetcodeEditor>
-              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/1143.最长公共子序列.py" />
-              <option name="questionId" value="1250" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/leetcode/editor/cn/121.买卖股票的最佳时机.py">
-          <value>
-            <LeetcodeEditor>
-              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/121.买卖股票的最佳时机.py" />
-              <option name="questionId" value="121" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/leetcode/editor/cn/208.实现 Trie (前缀树).py">
-          <value>
-            <LeetcodeEditor>
-              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/208.实现 Trie (前缀树).py" />
-              <option name="questionId" value="208" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/leetcode/editor/cn/322.零钱兑换.py">
-          <value>
-            <LeetcodeEditor>
-              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/322.零钱兑换.py" />
-              <option name="questionId" value="322" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/leetcode/editor/cn/33.搜索旋转排序数组.py">
-          <value>
-            <LeetcodeEditor>
-              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/33.搜索旋转排序数组.py" />
-              <option name="questionId" value="33" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/leetcode/editor/cn/455.分发饼干.py">
-          <value>
-            <LeetcodeEditor>
-              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/455.分发饼干.py" />
-              <option name="questionId" value="455" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/leetcode/editor/cn/55.跳跃游戏.py">
-          <value>
-            <LeetcodeEditor>
-              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/55.跳跃游戏.py" />
-              <option name="questionId" value="55" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/leetcode/editor/cn/62.不同路径.py">
-          <value>
-            <LeetcodeEditor>
-              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/62.不同路径.py" />
-              <option name="questionId" value="62" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/leetcode/editor/cn/63.不同路径 II.py">
-          <value>
-            <LeetcodeEditor>
-              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/63.不同路径 II.py" />
-              <option name="questionId" value="63" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/leetcode/editor/cn/69.x 的平方根.py">
-          <value>
-            <LeetcodeEditor>
-              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/69.x 的平方根.py" />
-              <option name="questionId" value="69" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/leetcode/editor/cn/704.二分查找.py">
-          <value>
-            <LeetcodeEditor>
-              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/704.二分查找.py" />
-              <option name="questionId" value="792" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/leetcode/editor/cn/77.组合.py">
-          <value>
-            <LeetcodeEditor>
-              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/77.组合.py" />
-              <option name="questionId" value="77" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/leetcode/editor/cn/90.子集 II.py">
-          <value>
-            <LeetcodeEditor>
-              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/90.子集 II.py" />
-              <option name="questionId" value="90" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/leetcode/editor/cn/[90]子集 II.py">
-          <value>
-            <LeetcodeEditor>
-              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/[90]子集 II.py" />
-              <option name="questionId" value="90" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
->>>>>>> 3c749cc2690c73d880f567f80ac04fd13f593ded
 </project>
