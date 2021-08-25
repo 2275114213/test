@@ -47,9 +47,30 @@
 #  👍 828 👎 0
 
 from typing import *
+
+
 # leetcode submit region begin(Prohibit modification and deletion)
 class Solution:
     def minimumTotal(self, triangle: List[List[int]]) -> int:
-# leetcode submit region end(Prohibit modification and deletion)
+        if not triangle:
+            return 0
+        if len(triangle) == 1:
+            return triangle[0][0]
+        left, right = 0, len(triangle[-1])
+        tmp = 0
+        count = 0
+        while count < len(triangle):
+            tmp += triangle[count][left]
+            left = left
+            current = left + 1
+            count += 1
+            if count < len(triangle) and current < len(triangle[count]) and triangle[count][left] > triangle[count][
+                current]:
+                left = current
+        return tmp
 
-        pass
+
+# leetcode submit region end(Prohibit modification and deletion)
+triangle = [[-1], [2, 3], [1, -1, -3]]
+res = Solution().minimumTotal(triangle)
+print(res)
