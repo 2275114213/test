@@ -52,22 +52,16 @@ from typing import *
 # leetcode submit region begin(Prohibit modification and deletion)
 class Solution:
     def minimumTotal(self, triangle: List[List[int]]) -> int:
-        if not triangle:
+        if not len(triangle):
             return 0
         if len(triangle) == 1:
             return triangle[0][0]
-        left, right = 0, len(triangle[-1])
-        tmp = 0
-        count = 0
-        while count < len(triangle):
-            tmp += triangle[count][left]
-            left = left
-            current = left + 1
-            count += 1
-            if count < len(triangle) and current < len(triangle[count]) and triangle[count][left] > triangle[count][
-                current]:
-                left = current
-        return tmp
+        mini = triangle[-1]
+        for i in range(len(triangle) - 2, -1, -1):
+            for j in range(0, len(triangle[i])):
+                print(triangle[i][j])
+                mini[j] = min(mini[j], mini[j + 1]) + triangle[i][j]
+        return mini[j]
 
 
 # leetcode submit region end(Prohibit modification and deletion)
