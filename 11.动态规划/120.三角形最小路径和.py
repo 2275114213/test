@@ -56,18 +56,12 @@ class Solution:
             return 0
         if len(triangle) == 1:
             return triangle[0][0]
-        left, right = 0, len(triangle[-1])
-        tmp = 0
-        count = 0
-        while count < len(triangle):
-            tmp += triangle[count][left]
-            left = left
-            current = left + 1
-            count += 1
-            if count < len(triangle) and current < len(triangle[count]) and triangle[count][left] > triangle[count][
-                current]:
-                left = current
-        return tmp
+
+        dp = triangle[-1]
+        for i in range(len(triangle) - 2, -1, -1):
+            for j in range(0, len(triangle[i])):
+                dp[j] = min(dp[j], dp[j + 1]) + triangle[i][j]
+        return dp[j]
 
 
 # leetcode submit region end(Prohibit modification and deletion)

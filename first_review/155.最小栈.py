@@ -68,25 +68,34 @@ from typing import *
 class Solution(object):
     def __init__(self):
         self.stack1 = []
-        self.minstack = None
+        self.minvalue = None
 
     def push(self, value):
         # 差值
-        diff = value - self.stack1[-1]
-        if diff < 0:
-            self.minstack = diff
+        if not self.stack1:
+            self.minvalue = value
+            diff = 0
+        else:
+            # 如果 diff 大于0, 则说明当前值大于最小值
+            diff = value - self.minvalue
+            self.minvalue = self.minvalue if diff > 0 else value
         self.stack1.append(diff)
 
     def pop(self):
-        value = self.stack1.pop()
-        if self.minstack<0:
-            self.
+        # 如果删除diff小于0
+        diff = self.stack1.pop()
+        if diff < 0:
+            top = self.minvalue
+            self.minvalue = top - diff
+        else:
+            top = diff + self.minvalue
+        return top
 
     def top(self):
         return self.stack1[-1]
 
     def getMin(self):
-        return self.minstack[-1]
+        return self.minvalue
 
 
 minStack = Solution()
