@@ -57,6 +57,16 @@ from typing import *
 
 
 # leetcode submit region begin(Prohibit modification and deletion)
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        dp = nums
+        for i in range(1, len(nums)):
+            dp[i] = max(dp[i - 1], 0) + nums[i]
+            # dp[i] = max(dp[i - 1]+nums[i], nums[i])  要么当前元素自身最大，要么包含之前 后最大
+        return max(dp)
 
 
 # leetcode submit region end(Prohibit modification and deletion)
+nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+res = Solution().maxSubArray(nums)
+print(res)
