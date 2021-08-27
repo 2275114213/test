@@ -57,10 +57,7 @@ class Solution:
         cur = pre.next
         for _ in range(right - left):
             next = cur.next
-            print("===", next.val)
-            print("@", cur.next.val, next.next.val)
             cur.next = next.next
-            print("#", next.next.val, pre.next.val)
             next.next = pre.next
             pre.next = next
 
